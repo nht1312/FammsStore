@@ -2,84 +2,81 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <head>
-<title>ĐĂNG KÝ TÀI KHOẢN</title>
+<title>Register</title>
 </head>
 <body>
-	<div class="row">
+	<div class="container">
 		<div class="span9">
 			<ul class="breadcrumb">
-				<li><a href="index.html">Trang chủ</a> <span class="divider">/</span></li>
-				<li class="active">Người dùng</li>
+				<li><a href="index.html">Home</a> <span class="divider">/</span></li>
+				<li class="active">Customer</li>
 			</ul>
-			<h3>Người dùng</h3>
 			<hr class="soft" />
 
 			<div class="row">
-				<div class="span4">
+				<div class="col-sm-6">
 					<div class="well">
-						<h5>ĐĂNG KÝ TÀI KHOẢN</h5>
+						<h5>Create an account</h5>
 						
 						<form:form action="dang-ky" method="POST" modelAttribute="users">
 							<div class="control-group">
 								<label class="control-label" for="inputEmail">Email</label>
 								<div class="controls">
 									<form:input type="email" class="span3"
-										placeholder="Mời nhập Email" path="user" />
+										placeholder="Enter Email" path="user" />
 								</div>
 							</div>
 							<div class="control-group">
-								<label class="control-label" for="inputEmail">Mật khẩu</label>
+								<label class="control-label" for="inputEmail">Password</label>
 								<div class="controls">
 									<form:input type="password" class="span3"
-										placeholder="Mời nhập mật khẩu" path="password" />
+										placeholder="Enter password" path="password" />
 								</div>
 							</div>
 							<br><div class="control-group">
-								<label class="control-label" for="inputEmail">Họ Tên</label>
+								<label class="control-label" for="inputEmail">Name</label>
 								<div class="controls">
 									<form:input type="text" class="span3"
-										placeholder="Mời nhập họ và tên" path="display_name" />
+										placeholder="Enter fullname" path="display_name" />
 								</div>
 							</div>
 							<div class="control-group">
-								<label class="control-label" for="inputEmail">Địa chỉ</label>
+								<label class="control-label" for="inputEmail">Address</label>
 								<div class="controls">
 									<form:input type="text" class="span3"
-										placeholder="Mời nhập địa chỉ" path="address" />
+										placeholder="Enter Address" path="address" />
 								</div>
 							</div>
 							<div class="controls">
-								<button type="submit" class="btn block">Đăng ký thành
-									viên</button>
+								<button style="float: right;" type="submit" class="btn btn-primary">Register</button>
 							</div>
 						</form:form>
 					</div>
 				</div>
 				<div class="span1">&nbsp;</div>
-				<div class="span4">
+				<div class="col-sm">
 					<div class="well">
-						<h5>Đăng nhập hệ thống</h5>
+						<h5>Login</h5>
 						<h1>${ statusLogin }</h1>
 						<form:form action="dang-nhap" method="POST" modelAttribute="users">
 							<div class="control-group">
 								<label class="control-label" for="inputEmail">Email</label>
 								<div class="controls">
 								<form:input type="email" class="span3"
-										placeholder="Mời nhập email" path="user" />
+										placeholder="Enter email" path="user" />
 								</div>
 							</div>
 							<div class="control-group">
-								<label class="control-label" for="inputPassword">Mật
-									khẩu</label>
+								<label class="control-label" for="inputPassword">Password</label>
 								<div class="controls">
 								<form:input type="password" class="span3"
-										placeholder="Mời nhập mật khẩu" path="password" />
+										placeholder="Enter Password" path="password" />
 								</div>
 							</div>
 							<div class="control-group">
 								<div class="controls">
-									<button type="submit" class="defaultBtn">Đăng nhập</button>
-									<a href="#">Quên mật khẩu?</a>
+									<button style="float: right;" type="submit" class="btn btn-primary">Signin</button>
+									<a href="#">forgot password?</a>
 								</div>
 							</div>
 						</form:form>

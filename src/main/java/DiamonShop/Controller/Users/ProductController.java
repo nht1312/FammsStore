@@ -9,12 +9,12 @@ import org.springframework.web.servlet.ModelAndView;
 import DiamonShop.Service.Users.IProductService;
 
 @Controller
-public class ProductController extends BaseController{
-	
+public class ProductController extends BaseController {
+
 	@Autowired
 	private IProductService _productService;
-	
-	@RequestMapping(value = {"chi-tiet-san-pham/{id}" })
+
+	@RequestMapping(value = { "chi-tiet-san-pham/{id}" })
 	public ModelAndView Index(@PathVariable long id) {
 		_mvShare.setViewName("users/products/product");
 		_mvShare.addObject("product", _productService.GetProductsByID(id));
